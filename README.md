@@ -42,7 +42,12 @@ Or: `/plugin` > Browse Plugins > Select marketplace
 | [`fabric-cli-mcp.mcpb`](claude-desktop/fabric-cli-mcp.mcpb) | 17 tools for Fabric workspace and item operations |
 | [`powerbi-modeling-mcp.mcpb`](claude-desktop/powerbi-modeling-mcp.mcpb) | Semantic model operations (Windows only) - repackaged from [Microsoft](https://github.com/microsoft/powerbi-modeling-mcp) |
 
-**Install:** Download .mcpb > double-click > review > **Install**
+1. Download the `.mcpb` file
+2. Open Claude Desktop > **Settings** > **Extensions** > drag and drop the `.mcpb`
+3. Read, review, and click **Install**
+4. *(To remove)* Settings > Extensions > (...) > Uninstall
+
+<a href="docs/remove-fabric-cli-mcp.png"><img src="docs/remove-fabric-cli-mcp.png" alt="remove-fabric-cli-mcp" width="650"></a>
 
 ### Skill (Fabric CLI context)
 
