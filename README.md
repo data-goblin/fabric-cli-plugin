@@ -34,32 +34,15 @@ Or: `/plugin` > Browse Plugins > Select marketplace
 
 > [!WARNING]
 > Agents with a `Bash` tool like Claude Code don't need MCP servers.
-> I recommend using Claude Code with this skill, but MCP servers let you use Claude Desktop if you really want to.
->
-> MCP servers allow the agent to execute operations that may modify your Fabric environment.
-> Agent supervision and guardrails are strongly recommended. Use with caution.
+> MCP servers allow agents to execute operations that may modify your Fabric environment.
+> Use with caution.
 
-#### Fabric CLI MCP (17 tools)
+| Server | Description |
+|--------|-------------|
+| [`fabric-cli-mcp.mcpb`](claude-desktop/fabric-cli-mcp.mcpb) | 17 tools for Fabric workspace and item operations |
+| [`powerbi-modeling-mcp.mcpb`](claude-desktop/powerbi-modeling-mcp.mcpb) | Semantic model operations (Windows only) - repackaged from [Microsoft](https://github.com/microsoft/powerbi-modeling-mcp) |
 
-Provides 17 tools for Fabric workspace and item operations via `fab` commands.
-
-1. Download [`fabric-cli-mcp.mcpb`](claude-desktop/fabric-cli-mcp.mcpb)
-2. Double-click to open in Claude Desktop
-3. Read, review, and click **Install**
-4. *(To remove)* Settings > Extensions > Fabric CLI (...) > Uninstall
-
-#### Power BI Modeling MCP
-
-Repackaged from [Microsoft's Power BI Modeling MCP](https://github.com/microsoft/powerbi-modeling-mcp) for easy Claude Desktop installation. Create, modify, and query Power BI semantic models.
-
-1. Download [`powerbi-modeling-mcp.mcpb`](claude-desktop/powerbi-modeling-mcp.mcpb)
-2. Double-click to open in Claude Desktop
-3. Read, review, and click **Install**
-4. *(To remove)* Settings > Extensions > Power BI Modeling MCP (...) > Uninstall
-
-> [!NOTE]
-> MCP servers have only been tested on Claude Desktop.
-> You can use them with any supported MCP client, but I recommend Claude Desktop.
+**Install:** Download .mcpb > double-click > review > **Install**
 
 ### Skill (Fabric CLI context)
 
