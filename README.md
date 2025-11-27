@@ -30,26 +30,36 @@ Or: `/plugin` > Browse Plugins > Select marketplace
 <!-- BEGIN CLAUDE_DESKTOP -->
 ## Claude Desktop
 
-### MCP Server (17 Fabric tools)
+### MCP Servers
 
 > [!WARNING]
-> Agents with a `Bash` tool like Claude Code don't need the MCP server.
-> I recommend using Claude Code with this skill, but this MCP server lets you use Claude Desktop if you really want to.
+> Agents with a `Bash` tool like Claude Code don't need MCP servers.
+> I recommend using Claude Code with this skill, but MCP servers let you use Claude Desktop if you really want to.
 >
-> The MCP server allows the agent to execute arbitrary `fab` commands.
-> While `fab rm` is excluded for safety, other destructive operations exist (`fab mv`, `fab set`, `fab api`).
+> MCP servers allow the agent to execute operations that may modify your Fabric environment.
 > Agent supervision and guardrails are strongly recommended. Use with caution.
+
+#### Fabric CLI MCP (17 tools)
+
+Provides 17 tools for Fabric workspace and item operations via `fab` commands.
 
 1. Download [`fabric-cli-mcp.mcpb`](claude-desktop/fabric-cli-mcp.mcpb)
 2. Double-click to open in Claude Desktop
 3. Read, review, and click **Install**
-4. *(To remove)* (Reopen) Settings > Extensions > Fabric CLI (...) > Uninstall
+4. *(To remove)* Settings > Extensions > Fabric CLI (...) > Uninstall
 
-<a href="docs/remove-fabric-cli-mcp.png"><img src="docs/remove-fabric-cli-mcp.png" alt="remove-fabric-cli-mcp" width="650"></a>
+#### Power BI Modeling MCP
+
+Repackaged from [Microsoft's Power BI Modeling MCP](https://github.com/microsoft/powerbi-modeling-mcp) for easy Claude Desktop installation. Create, modify, and query Power BI semantic models.
+
+1. Download [`powerbi-modeling-mcp.mcpb`](claude-desktop/powerbi-modeling-mcp.mcpb)
+2. Double-click to open in Claude Desktop
+3. Read, review, and click **Install**
+4. *(To remove)* Settings > Extensions > Power BI Modeling MCP (...) > Uninstall
 
 > [!NOTE]
-> This MCP server has only been tested on Claude Desktop.
-> You can use it with any supported MCP client, but I recommend Claude Desktop.
+> MCP servers have only been tested on Claude Desktop.
+> You can use them with any supported MCP client, but I recommend Claude Desktop.
 
 ### Skill (Fabric CLI context)
 
@@ -81,7 +91,8 @@ Requires: Pro, Max, Team, or Enterprise plan
 ## What's Included
 
 - **Skill**: Fab CLI guidance and patterns
-- **MCP Server**: 17 tools for Fabric operations (Claude Desktop only)
+- **Fabric CLI MCP**: 17 tools for Fabric operations (Claude Desktop only)
+- **Power BI Modeling MCP**: Semantic model operations (Claude Desktop only)
 - **Microsoft Docs MCP**: Auto-included (Claude Code only)
 
 <br>
@@ -93,7 +104,7 @@ Requires: Pro, Max, Team, or Enterprise plan
 </p>
 
 <p align="center">
-  <em>Built with assistance from <a href="https://claude.ai/claude-code">Claude Code</a> donkeys 🫏. AI-generated code has been reviewed but may contain errors. Use at your own risk.</p>
+  <em>Built with assistance from <a href="https://claude.ai/claude-code">Claude Code</a> donkeys. AI-generated code has been reviewed but may contain errors. Use at your own risk.</p>
 
 <p align="center">
   Context files are human-written and revised by Claude Code after iterative use. No AI-generated creative assets used.</em>
