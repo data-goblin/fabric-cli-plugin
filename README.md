@@ -67,7 +67,7 @@ Requires: Pro, Max, Team, or Enterprise plan
 
 ## Requirements
 
-- [uv](https://docs.astral.sh/uv/) for MCP server
+- [uv](https://docs.astral.sh/uv/) for MCP server (Windows: `winget install astral-sh.uv`)
 - [fab CLI](https://pypi.org/project/fabric-cli/) authenticated via `fab auth login`
 
 ## What's Included
