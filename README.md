@@ -23,6 +23,8 @@
 /plugin install fabric-cli-plugin@data-goblin
 ```
 
+![install-plugin-claude-code](docs/install-plugin-claude-code.png)
+
 Or: `/plugin` > Browse Plugins > Select marketplace
 
 <!-- BEGIN CLAUDE_DESKTOP -->
