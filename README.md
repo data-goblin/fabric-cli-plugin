@@ -23,8 +23,6 @@
 /plugin install fabric-cli-plugin@data-goblin
 ```
 
-![install-plugin-claude-code](docs/install-plugin-claude-code.png)
-
 Or: `/plugin` > Browse Plugins > Select marketplace
 
 <!-- BEGIN CLAUDE_DESKTOP -->
@@ -103,3 +101,4 @@ Requires: Pro, Max, Team, or Enterprise plan
 <p align="center">
   <a href="https://github.com/data-goblin">Kurt Buhler</a> · <a href="https://data-goblins.com">Data Goblins</a> · part of <a href="https://tabulareditor.com">Tabular Editor</a>
 </p>
+
