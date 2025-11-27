@@ -149,7 +149,8 @@ def create_manifest(version: str, platforms: list[str]) -> dict:
         "long_description": (
             "The Power BI Modeling MCP Server brings Power BI semantic modeling capabilities to your AI agents. "
             "Build and modify semantic models with natural language, execute bulk operations at scale, "
-            "apply modeling best practices, and run DAX queries against your models."
+            "apply modeling best practices, and run DAX queries against your models. "
+            "Repackaged by Kurt Buhler for ease of installation with Claude Desktop."
         ),
         "author": {
             "name": "Microsoft",
