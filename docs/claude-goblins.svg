@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130 22">
+  <defs>
+    <linearGradient id="sweep" x1="-100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#e85d04"/>
+      <stop offset="40%" stop-color="#e85d04"/>
+      <stop offset="50%" stop-color="#ffd000"/>
+      <stop offset="60%" stop-color="#e85d04"/>
+      <stop offset="100%" stop-color="#e85d04"/>
+      <animate attributeName="x1" values="-100%;100%" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0%;200%" dur="2.5s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+  <text x="65" y="16" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" font-style="italic" fill="url(#sweep)">Claude Goblins</text>
+</svg>

@@ -1,0 +1,10 @@
+.DS_Store
+*.pyc
+__pycache__/
+.env
+.venv/
+*.log
+releases/
+build.py
+servers/
+hooks/

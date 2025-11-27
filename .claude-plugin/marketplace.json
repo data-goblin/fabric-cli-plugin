@@ -1,0 +1,21 @@
+{
+  "name": "fabric-cli-plugin",
+  "owner": {
+    "name": "Kurt Buhler"
+  },
+  "metadata": {
+    "description": "Skill that teaches Claude to use the Microsoft Fabric CLI (fab).",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "fabric-cli-plugin",
+      "description": "Fabric CLI context and resources for effective use of the Fabric CLI with coding agents.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./fabric-cli"
+      ]
+    }
+  ]
+}
