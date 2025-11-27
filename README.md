@@ -73,8 +73,8 @@ Requires: Pro, Max, Team, or Enterprise plan
 
 ## Testing
 
-- **macOS** (15.6.1): Claude Code 2.0.55 - 2025-11-27
-- **Windows** (11 25H2): Claude Code 2.0.55 - 2025-11-27
+- **macOS** (15.6.1): Claude Code 2.0.55, Claude Desktop 1.0.1217 - 2025-11-27
+- **Windows** (11 25H2): Claude Code 2.0.55, Claude Desktop 1.0.1217 - 2025-11-27
 
 ## What's Included
 
