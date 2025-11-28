@@ -2,14 +2,14 @@ name: Update Power BI Modeling MCP
 
 on:
   schedule:
-    # Run daily at 6 AM UTC
-    - cron: '0 6 * * *'
+    # Run weekly on Monday at 6 AM UTC
+    - cron: '0 6 * * 1'
   workflow_dispatch:
     inputs:
       force_update:
         description: 'Force update even if version unchanged'
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 permissions:
@@ -45,6 +45,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add claude-desktop/powerbi-modeling-mcp.mcpb
-          git add .powerbi-modeling-mcp-version
+          git add .github/.powerbi-modeling-mcp-version
           git commit -m "Update Power BI Modeling MCP to v${{ steps.build.outputs.version }}"
           git push

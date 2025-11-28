@@ -24,7 +24,7 @@ PUBLISHER = "analysis-services"
 EXTENSION_NAME = "powerbi-modeling-mcp"
 OUTPUT_DIR = Path("claude-desktop")
 OUTPUT_FILE = OUTPUT_DIR / "powerbi-modeling-mcp.mcpb"
-VERSION_FILE = Path(".powerbi-modeling-mcp-version")
+VERSION_FILE = Path(".github/.powerbi-modeling-mcp-version")
 
 # VS Marketplace API
 MARKETPLACE_API = "https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery"

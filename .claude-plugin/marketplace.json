@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Skill that teaches Claude to use the Microsoft Fabric CLI (fab).",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
@@ -14,8 +14,12 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./fabric-cli"
-      ]
+        "./skills/fabric-cli"
+      ],
+      "commands": [
+        "./commands"
+      ],
+      "mcpServers": "./.mcp.json"
     }
   ]
 }

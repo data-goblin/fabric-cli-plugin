@@ -5,6 +5,11 @@ __pycache__/
 .venv/
 *.log
 releases/
+!docs/releases/
 build.py
 servers/
+!skills/fabric-cli/servers/
 hooks/
+CLAUDE.md
+!skills/fabric-cli/agent-templates/CLAUDE.md
+.claude/

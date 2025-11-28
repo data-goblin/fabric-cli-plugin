@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.1.0-blue" alt="Version">
+  <img src="https://img.shields.io/badge/version-0.2.0-blue" alt="Version">
   <img src="https://img.shields.io/badge/uv-required-purple" alt="uv required">
   <img src="https://img.shields.io/badge/fab_cli-required-orange" alt="Fab CLI">
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License">
@@ -77,9 +77,17 @@ Requires: Pro, Max, Team, or Enterprise plan
 ## What's Included
 
 - **Skill**: Fab CLI guidance and patterns
+- **Commands**: `/audit-context` for reviewing project context files
+- **Agent Template**: CLAUDE.md template for Power BI/Fabric projects
 - **Fabric CLI MCP**: 17 tools for Fabric operations (Claude Desktop only)
-- **Power BI Modeling MCP**: Semantic model operations (Claude Desktop only)
-- **Microsoft Docs MCP**: Auto-included (Claude Code only)
+- **Power BI Modeling MCP**: Semantic model operations (Windows only)
+- **Microsoft Docs MCP**: Search official Microsoft/Azure documentation
+
+## Additional Resources
+
+The following resources aren't included but might be useful:
+
+- [DAX Performance Tuner MCP](https://github.com/microsoft/fabric-toolbox/tree/main/tools/DAXPerformanceTunerMCPServer) - AI-assisted DAX query optimization (requires build)
 
 <br>
 
