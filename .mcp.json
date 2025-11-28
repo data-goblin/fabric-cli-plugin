@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "microsoft-learn": {
+      "type": "http",
+      "url": "https://learn.microsoft.com/api/mcp"
+    },
+    "powerbi-modeling-mcp": {
+      "command": "${PBI_MODELING_MCP_PATH:-C:\\MCPServers\\powerbi-modeling-mcp.exe}",
+      "args": ["--start"],
+      "env": {
+        "PBI_MODELING_MCP_CLIENT_ID": "ea0616ba-638b-4df5-95b9-636659ae5121"
+      }
+    }
+  }
+}

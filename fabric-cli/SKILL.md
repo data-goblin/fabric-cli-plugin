@@ -23,6 +23,8 @@ Activate automatically when tasks involve:
 
 ## Critical
 
+- Before first use, ask the user if they have Fabric admin access, any API restrictions, or preferences for Fabric/Power BI API usage
+- Remind the user to add their Fabric access level and preferences to their agent memory files (e.g., CLAUDE.md) for future sessions
 - If workspace or item name is unclear, ask the user first, then verify with `fab ls` or `fab exists` before proceeding
 - The first time you use `fab` run `fab auth status` to make sure the user is authenticated. If not, ask the user to run `fab auth login` to login
 - Always use `fab --help` and `fab <command> --help` the first time you use a command to understand its syntax, first
@@ -332,6 +334,74 @@ fab import "Production.Workspace/Pipeline.DataPipeline" -i /tmp/migration/Pipeli
 fab import "Production.Workspace/Report.Report" -i /tmp/migration/Report.Report
 ```
 
+## Cross-Workspace Search
+
+### DataHub V2 API (Recommended)
+
+Use `scripts/datahub_search.py` for cross-workspace search with rich metadata not available elsewhere:
+
+```bash
+# Find all semantic models (use "Model" not "SemanticModel")
+python3 scripts/datahub_search.py --type Model
+
+# Find models by name
+python3 scripts/datahub_search.py --type Model --filter "Sales"
+
+# Find stale items (not visited in 6+ months)
+python3 scripts/datahub_search.py --type Model --not-visited-since 2024-06-01
+
+# Find items by owner
+python3 scripts/datahub_search.py --type PowerBIReport --owner "kurt"
+
+# Find Direct Lake models only
+python3 scripts/datahub_search.py --type Model --storage-mode directlake
+
+# Find items in workspace
+python3 scripts/datahub_search.py --type Lakehouse --workspace "fit-data"
+
+# Get JSON output
+python3 scripts/datahub_search.py --type Model --output json
+
+# Sort by last visited (oldest first)
+python3 scripts/datahub_search.py --type Model --sort last-visited --sort-order asc
+
+# List all available types
+python3 scripts/datahub_search.py --list-types
+```
+
+**Unique DataHub fields** (not available via fab api or admin APIs):
+
+- `lastVisitedTimeUTC` - When item was last opened/used
+- `storageMode` - Import, DirectQuery, or DirectLake
+- `ownerUser` - Full owner details (name, email)
+- `capacitySku` - F2, F64, PP, etc.
+- `isDiscoverable` - Whether item appears in search
+
+**Important type mappings:**
+
+- Semantic models: use `--type Model` (not SemanticModel)
+- Dataflows: use `--type DataFlow` (capital F)
+- Notebooks: use `--type SynapseNotebook`
+
+### Admin APIs (Requires Admin Role)
+
+If you have Fabric/Power BI admin access:
+
+```bash
+# Find semantic models by name (cross-workspace)
+fab api "admin/items" -P "type=SemanticModel" -q "itemEntities[?contains(name, 'Sales')]"
+
+# Find all notebooks
+fab api "admin/items" -P "type=Notebook" -q "itemEntities[].{name:name,workspace:workspaceId}"
+
+# Find all lakehouses
+fab api "admin/items" -P "type=Lakehouse"
+
+# Common types: SemanticModel, Report, Notebook, Lakehouse, Warehouse, DataPipeline, Ontology
+```
+
+For full admin API reference: [admin.md](./references/admin.md)
+
 ## Key Patterns
 
 ### JMESPath Queries
@@ -423,7 +493,8 @@ fab <command> --help
 - [Reports](./references/reports.md) - Export, import, visuals, fields
 - [Notebooks](./references/notebooks.md) - Job execution, parameters
 - [Workspaces](./references/workspaces.md) - Create, manage, permissions
-- [API Reference](./references/fab-api.md) - Capacities, gateways, pipelines, domains, dataflows, apps, admin
+- [Admin APIs](./references/admin.md) - Cross-workspace search, tenant operations, governance
+- [API Reference](./references/fab-api.md) - Capacities, gateways, pipelines, domains, dataflows, apps
 - [Full Command Reference](./references/reference.md) - All commands detailed
 - [Quick Start Guide](./references/quickstart.md) - Copy-paste examples
 

@@ -8,3 +8,5 @@ releases/
 build.py
 servers/
 hooks/
+CLAUDE.md
+!fabric-cli/agent-templates/CLAUDE.md
