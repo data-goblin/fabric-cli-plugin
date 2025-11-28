@@ -338,35 +338,35 @@ fab import "Production.Workspace/Report.Report" -i /tmp/migration/Report.Report
 
 ### DataHub V2 API (Recommended)
 
-Use `scripts/datahub_search.py` for cross-workspace search with rich metadata not available elsewhere:
+Use `scripts/search_across_workspaces.py` for cross-workspace search with rich metadata not available elsewhere:
 
 ```bash
 # Find all semantic models (use "Model" not "SemanticModel")
-python3 scripts/datahub_search.py --type Model
+python3 scripts/search_across_workspaces.py --type Model
 
 # Find models by name
-python3 scripts/datahub_search.py --type Model --filter "Sales"
+python3 scripts/search_across_workspaces.py --type Model --filter "Sales"
 
 # Find stale items (not visited in 6+ months)
-python3 scripts/datahub_search.py --type Model --not-visited-since 2024-06-01
+python3 scripts/search_across_workspaces.py --type Model --not-visited-since 2024-06-01
 
 # Find items by owner
-python3 scripts/datahub_search.py --type PowerBIReport --owner "kurt"
+python3 scripts/search_across_workspaces.py --type PowerBIReport --owner "kurt"
 
 # Find Direct Lake models only
-python3 scripts/datahub_search.py --type Model --storage-mode directlake
+python3 scripts/search_across_workspaces.py --type Model --storage-mode directlake
 
 # Find items in workspace
-python3 scripts/datahub_search.py --type Lakehouse --workspace "fit-data"
+python3 scripts/search_across_workspaces.py --type Lakehouse --workspace "fit-data"
 
 # Get JSON output
-python3 scripts/datahub_search.py --type Model --output json
+python3 scripts/search_across_workspaces.py --type Model --output json
 
 # Sort by last visited (oldest first)
-python3 scripts/datahub_search.py --type Model --sort last-visited --sort-order asc
+python3 scripts/search_across_workspaces.py --type Model --sort last-visited --sort-order asc
 
 # List all available types
-python3 scripts/datahub_search.py --list-types
+python3 scripts/search_across_workspaces.py --list-types
 ```
 
 **Unique DataHub fields** (not available via fab api or admin APIs):

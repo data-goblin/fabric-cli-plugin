@@ -7,7 +7,7 @@ __pycache__/
 releases/
 build.py
 servers/
-!fabric-cli/servers/
+!skills/fabric-cli/servers/
 hooks/
 CLAUDE.md
-!fabric-cli/agent-templates/CLAUDE.md
+!skills/fabric-cli/agent-templates/CLAUDE.md

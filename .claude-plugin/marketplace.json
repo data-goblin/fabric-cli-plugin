@@ -14,10 +14,10 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./fabric-cli"
+        "./skills/fabric-cli"
       ],
       "commands": [
-        "./fabric-cli/commands"
+        "./commands"
       ],
       "mcpServers": "./.mcp.json"
     }

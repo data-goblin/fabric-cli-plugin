@@ -38,11 +38,11 @@ fab --help             # Command reference
 
 ## Cross-Workspace Search
 
-Use `scripts/datahub_search.py` for finding items across workspaces:
+Use `scripts/search_across_workspaces.py` for finding items across workspaces:
 
 ```bash
-python3 scripts/datahub_search.py --type Model --filter "Sales"
-python3 scripts/datahub_search.py --list-types
+python3 scripts/search_across_workspaces.py --type Model --filter "Sales"
+python3 scripts/search_across_workspaces.py --list-types
 ```
 
 ## References
