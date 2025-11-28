@@ -81,6 +81,12 @@ Requires: Pro, Max, Team, or Enterprise plan
 - **Power BI Modeling MCP**: Semantic model operations (Claude Desktop only)
 - **Microsoft Docs MCP**: Auto-included (Claude Code only)
 
+## Additional Resources
+
+The following resources aren't included but might be useful:
+
+- [DAX Performance Tuner MCP](https://github.com/microsoft/fabric-toolbox/tree/main/tools/DAXPerformanceTunerMCPServer) - AI-assisted DAX query optimization (requires build)
+
 <br>
 
 ---
