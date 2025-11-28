@@ -5,6 +5,7 @@ __pycache__/
 .venv/
 *.log
 releases/
+!docs/releases/
 build.py
 servers/
 !skills/fabric-cli/servers/
